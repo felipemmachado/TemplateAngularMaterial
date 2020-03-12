@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './Views/login/login.component';
 import { ContainerComponent } from './Views/container/container.component';
 import { MatSliderModule } from '@angular/material/slider';
 
