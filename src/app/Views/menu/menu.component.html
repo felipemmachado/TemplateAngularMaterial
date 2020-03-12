@@ -1,0 +1,38 @@
+
+<mat-toolbar color="primary">
+
+    <span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon style="margin-top: -3px">menu</mat-icon> MENU
+      </button>
+    </span>
+    <span class="flexExpand"></span>
+    <span>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon style="margin-top: -3px;">perm_identity</mat-icon>
+        Olá, Felipe<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Sair</button>
+        <button mat-menu-item>Perfil</button>
+      </mat-menu>
+    </span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" #sidenav class="example-sidenav" [fixedInViewport]="true">
+    <button mat-button (click)="sidenav.toggle()">
+      <mat-icon>close</mat-icon> Fechar
+    </button>
+    <!-- <a href="#" mat-list-item>Menu Item 1</a>
+    <a href="#" mat-list-item>Menu Item 2</a>
+    <a href="#" mat-list-item>Menu Item 3</a>
+    <a href="#" mat-list-item>Menu Item 4</a>
+    <a href="#" mat-list-item>Menu Item 5</a>
+    <a href="#"mat-list-item>Menu Item 6</a> -->
+  </mat-sidenav>
+  <mat-sidenav-content style="width: 100%;">
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -26,7 +26,20 @@ $my-dream-app-theme: mat-light-theme($my-dream-app-primary, $my-dream-app-accent
 // that you are using.
 @include angular-material-theme($my-dream-app-theme);
 
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-green);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// import grid system boostrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/grid";
